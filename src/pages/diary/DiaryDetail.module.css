@@ -1,0 +1,34 @@
+.page { padding:40px 44px; max-width:780px; animation:fadeUp 0.35s ease both; }
+@keyframes fadeUp { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+
+.topBar { display:flex; justify-content:space-between; align-items:center; margin-bottom:28px; }
+.back   { color:var(--ink-muted); font-size:14px; transition:color 0.15s; }
+.back:hover { color:var(--ink); }
+
+.actions   { display:flex; gap:10px; }
+.editBtn   { padding:8px 18px; border:1.5px solid var(--border); border-radius:var(--radius-sm); color:var(--ink-light); font-size:13px; font-weight:500; transition:all 0.15s; }
+.editBtn:hover { border-color:var(--accent); color:var(--accent); }
+.deleteBtn { padding:8px 18px; border:1.5px solid #fee2e2; border-radius:var(--radius-sm); color:#ef4444; background:none; font-size:13px; font-weight:500; cursor:pointer; transition:background 0.15s; }
+.deleteBtn:hover:not(:disabled) { background:#fee2e2; }
+.deleteBtn:disabled { opacity:0.6; cursor:not-allowed; }
+
+.entry { background:var(--white); border-radius:18px; padding:52px; box-shadow:var(--shadow-md); border:1px solid var(--border); border-top:4px solid var(--accent); }
+
+.meta  { display:flex; align-items:center; gap:16px; margin-bottom:20px; flex-wrap:wrap; }
+.dates { display:flex; align-items:center; gap:6px; font-size:13px; color:var(--ink-faint); flex-wrap:wrap; }
+.dot   { color:var(--border); }
+.edited{ font-style:italic; }
+
+.entryTitle { font-family:var(--font-serif); font-size:36px; font-weight:700; color:var(--ink); line-height:1.25; margin-bottom:24px; }
+.divider    { border:none; border-top:1px solid var(--border); margin-bottom:28px; }
+.content    { font-family:var(--font-serif); font-size:17px; color:var(--ink-light); line-height:1.9; white-space:pre-wrap; }
+
+.errorState { text-align:center; padding:80px 0; color:var(--ink-muted); font-size:15px; }
+.errorState a { display:block; margin-top:10px; color:var(--accent); font-size:14px; }
+
+@media (max-width:600px) {
+  .page { padding:24px 20px; }
+  .entry { padding:28px 22px; }
+  .entryTitle { font-size:26px; }
+  .topBar { flex-direction:column; align-items:flex-start; gap:14px; }
+}

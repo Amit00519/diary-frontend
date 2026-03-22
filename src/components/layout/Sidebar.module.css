@@ -1,0 +1,70 @@
+.sidebar {
+  width: 240px; min-height: 100vh;
+  background: var(--ink);
+  display: flex; flex-direction: column;
+  padding: 28px 0;
+  position: sticky; top: 0; height: 100vh;
+  flex-shrink: 0;
+}
+
+.brand {
+  display: flex; align-items: center; gap: 10px;
+  padding: 0 20px 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  font-size: 20px;
+}
+.brandName {
+  font-family: var(--font-serif);
+  font-size: 19px; font-weight: 600;
+  color: var(--cream);
+}
+
+.nav {
+  flex: 1; padding: 20px 12px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+
+.navItem {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; border-radius: var(--radius-sm);
+  color: #a8a29e; font-size: 14px; font-weight: 500;
+  transition: all 0.15s;
+}
+.navItem:hover { background: rgba(255,255,255,0.06); color: var(--cream); }
+.navItem.active { background: rgba(255,255,255,0.1); color: var(--cream); }
+
+.navNew { color: #fbbf24; }
+.navNew:hover { background: rgba(251,191,36,0.1); color: #fde68a; }
+.navNew.activeNew { background: rgba(251,191,36,0.15); color: #fde68a; }
+
+.userCard {
+  margin: 12px; padding: 12px;
+  background: rgba(255,255,255,0.05);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255,255,255,0.06);
+  display: flex; align-items: center; gap: 10px;
+}
+.avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 600; color: white; flex-shrink: 0;
+}
+.userInfo { flex: 1; min-width: 0; }
+.userName {
+  font-size: 13px; font-weight: 500; color: var(--cream);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.userEmail {
+  font-size: 11px; color: #78716c;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.logoutBtn {
+  background: none; border: none; color: #57534e;
+  padding: 4px; border-radius: 4px;
+  display: flex; align-items: center;
+  transition: color 0.15s; flex-shrink: 0;
+}
+.logoutBtn:hover { color: #ef4444; }
+
+@media (max-width: 768px) { .sidebar { display: none; } }
