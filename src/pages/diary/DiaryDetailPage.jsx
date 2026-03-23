@@ -8,13 +8,17 @@ import { Spinner } from '../../components/shared/Spinner'
 import styles from './DiaryDetail.module.css'
 
 function formatDate(iso) {
-  return new Date(iso).toLocaleDateString('en-US', {
+  return new Date(iso + 'Z').toLocaleDateString('en-IN', {
     weekday: 'long', month: 'long', day: 'numeric', year: 'numeric',
+    timeZone: 'Asia/Kolkata',
   })
 }
 
 function formatTime(iso) {
-  return new Date(iso).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })
+  return new Date(iso + 'Z').toLocaleTimeString('en-IN', {
+    hour: 'numeric', minute: '2-digit',
+    timeZone: 'Asia/Kolkata',
+  })
 }
 
 export function DiaryDetailPage() {

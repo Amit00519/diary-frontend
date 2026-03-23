@@ -8,8 +8,9 @@ import { Spinner } from '../../components/shared/Spinner'
 import styles from './DiaryList.module.css'
 
 function formatDate(iso) {
-  return new Date(iso).toLocaleDateString('en-US', {
+  return new Date(iso + 'Z').toLocaleDateString('en-IN', {
     month: 'short', day: 'numeric', year: 'numeric',
+    timeZone: 'Asia/Kolkata',
   })
 }
 
