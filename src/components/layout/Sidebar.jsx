@@ -15,9 +15,9 @@ export function Sidebar() {
 
   return (
     <>
-      <button className={styles.hamburger} onClick={() => setOpen(true)}>
+      <button className={styles.hamburger} onClick={() => setOpen(!open)}>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" strokeWidth="2">
+          stroke="currentColor" strokeWidth="2">
           <line x1="3" y1="6" x2="21" y2="6" />
           <line x1="3" y1="12" x2="21" y2="12" />
           <line x1="3" y1="18" x2="21" y2="18" />
@@ -25,7 +25,7 @@ export function Sidebar() {
       </button>
 
       <div className={`${styles.overlay} ${open ? styles.open : ''}`}
-           onClick={() => setOpen(false)} />
+        onClick={() => setOpen(false)} />
 
       <aside className={`${styles.sidebar} ${open ? styles.open : ''}`}>
         <div className={styles.brand}>
@@ -61,7 +61,7 @@ export function Sidebar() {
           </div>
           <button className={styles.logoutBtn} onClick={handleLogout} title="Logout">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" strokeWidth="2">
+              stroke="currentColor" strokeWidth="2">
               <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
               <polyline points="16 17 21 12 16 7" />
               <line x1="21" y1="12" x2="9" y2="12" />
