@@ -67,4 +67,24 @@
 }
 .logoutBtn:hover { color: #ef4444; }
 
-@media (max-width: 768px) { .sidebar { display: none; } }
+/* @media (max-width: 768px) { .sidebar { display: none; } } */
+/* Beause of this line not able to see the logout section in mobile so replacing it with below code.
+*/
+.hamburger {
+  display: none;
+  position: fixed; top: 16px; left: 16px; z-index: 200;
+  background: var(--ink); border: none;
+  padding: 8px; border-radius: 6px; cursor: pointer; color: var(--cream);
+}
+
+.overlay {
+  display: none;
+  position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 99;
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; align-items: center; justify-content: center; }
+  .sidebar { display: flex; position: fixed; left: -240px; top: 0; z-index: 100; transition: left 0.25s ease; }
+  .sidebar.open { left: 0; }
+  .overlay.open { display: block; }
+}
