@@ -12,6 +12,9 @@ export const MOODS = Object.keys(MOOD_META)
 
 // export const API_BASE_URL = 'http://localhost:8080/api'
 //Change the below for deployement
-export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080/api';
+// export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080/api';
+
+export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://diary-backend-production-bad7.up.railway.app/api';
+
 
 export const STORAGE_KEY  = 'diary_auth'
